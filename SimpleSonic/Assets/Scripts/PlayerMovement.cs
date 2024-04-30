@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityOSC;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -13,7 +14,10 @@ public class PlayerMovement : MonoBehaviour
     
     void Start()
     {
+        Application.runInBackground = true;
         rb2d = GetComponent<Rigidbody2D>();
+        OSCHandler.Instance.Init();
+        OSCHandler.Instance.SendMessageToClient("pd","/unity/trigger","ready");
     }
 
     void FixedUpdate()

@@ -63,10 +63,10 @@ public class OSCHandler : MonoBehaviour
 	OSCHandler()
 	{
 	}
-
+	/*
 	private void Start(){
 		Init();
-	}
+	}*/
 	
 	public static OSCHandler Instance 
 	{
@@ -106,7 +106,7 @@ public class OSCHandler : MonoBehaviour
         //Example:
         CreateServer("unity", 8001);
 
-		SendMessageToClient("pd", "/unity/trigger", "Hello World!");
+		//SendMessageToClient("pd", "/unity/trigger", "Hello World!");
     }
 
     #region Properties
