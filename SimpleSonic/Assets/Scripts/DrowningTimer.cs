@@ -38,12 +38,14 @@ public class DrowningTimer : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Water")) {
             isUnderwater = true;
+            OSCHandler.Instance.SendMessageToClient("pd","/unity/waterTrigger", 0);
         }
     }
 
     private void OnTriggerExit2D(Collider2D other) {
         if (other.gameObject.CompareTag("Water")) {
             isUnderwater = false;
+            OSCHandler.Instance.SendMessageToClient("pd","/unity/waterTrigger", 0);
             timer = 0;
         }
     }

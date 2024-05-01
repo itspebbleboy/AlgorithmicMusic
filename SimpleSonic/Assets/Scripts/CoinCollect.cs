@@ -1,14 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
-using UnityOSC;
-
 public class CoinCollect : MonoBehaviour
 {
+    int coins = 0;
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Coin")) {
             other.gameObject.SetActive(false);
-            OSCHandler.Instance.SendMessageToClient("pd","/unity/coin", 0);
+            OSCHandler.Instance.SendMessageToClient("pd","/unity/coin", UnityEngine.Random.Range(0,3));
         }
     }
 }
