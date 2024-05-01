@@ -1,4 +1,4 @@
-#N canvas 793 572 835 856 12;
+#N canvas 1330 220 835 856 12;
 #X obj 40 219 mtof;
 #X obj 40 276 *~ 10000;
 #X obj 40 247 osc~;
@@ -15,7 +15,7 @@
 #X obj 40 304 clip~ 0 1;
 #X obj 57 17 r val1;
 #X floatatom 59 47 5 0 0 0 - - - 0;
-#X obj 59 70 select 0 1 2 3;
+#X obj 59 70 select 0 1 2;
 #X connect 0 0 2 0;
 #X connect 1 0 13 0;
 #X connect 2 0 1 0;
@@ -39,4 +39,3 @@
 #X connect 16 0 11 0;
 #X connect 16 1 6 0;
 #X connect 16 2 12 0;
-#X connect 16 3 11 0;

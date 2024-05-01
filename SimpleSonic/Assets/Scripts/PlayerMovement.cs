@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +19,15 @@ public class PlayerMovement : MonoBehaviour
         OSCHandler.Instance.Init();
         //OSCHandler.Instance.SendMessageToClient("pd","/unity/trigger","ready");
         OSCHandler.Instance.SendMessageToClient("pd","/unity/test1","ready");
+        
+        OSCHandler.Instance.SendMessageToClient("pd","/unity/music", 0);
+        Debug.Log("moosic");
+    }
+    void OnDestroy(){
+        if (GetComponent<DrowningTimer>().isUnderwater == false){
+            OSCHandler.Instance.SendMessageToClient("pd","/unity/music", 0);
+            Debug.Log("here");
+        }
     }
 
     void FixedUpdate()

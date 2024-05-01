@@ -79,6 +79,7 @@ public class OSCHandler : MonoBehaviour
 	       
 	        return _instance;
 	    }
+		set{ _instance = value;}
 	}
 	#endregion
 	
@@ -135,6 +136,7 @@ public class OSCHandler : MonoBehaviour
 	/// </summary>
 	void OnApplicationQuit() 
 	{
+
 		foreach(KeyValuePair<string,ClientLog> pair in _clients)
 		{
 			pair.Value.client.Close();

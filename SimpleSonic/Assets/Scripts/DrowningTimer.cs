@@ -11,7 +11,7 @@ public class DrowningTimer : MonoBehaviour
     [SerializeField]
     private float maxTime = 5;
     private float timer = 0;
-    private bool isUnderwater = false;
+    public bool isUnderwater = false;
 
     void Start()
     {
@@ -44,6 +44,7 @@ public class DrowningTimer : MonoBehaviour
         if (other.gameObject.CompareTag("Water")) {
             isUnderwater = true;
             OSCHandler.Instance.SendMessageToClient("pd","/unity/waterTrigger", 0);
+            OSCHandler.Instance.SendMessageToClient("pd","/unity/music", 0);
         }
     }
 
@@ -52,6 +53,8 @@ public class DrowningTimer : MonoBehaviour
             isUnderwater = false;
             OSCHandler.Instance.SendMessageToClient("pd","/unity/waterTrigger", 0);
             OSCHandler.Instance.SendMessageToClient("pd","/unity/waterTime", 500);
+            
+            OSCHandler.Instance.SendMessageToClient("pd","/unity/music", 0);
             timer = 0;
         }
     }
