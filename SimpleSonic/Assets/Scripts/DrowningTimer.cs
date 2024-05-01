@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,8 +27,12 @@ public class DrowningTimer : MonoBehaviour
         // slider should show up if underwater
         slider.gameObject.SetActive(isUnderwater);
         // timer should count if underwater
+        
         if (isUnderwater) {
+            
             timer += Time.deltaTime;
+            Debug.Log((maxTime-timer)*100);
+            OSCHandler.Instance.SendMessageToClient("pd","/unity/waterTime", (maxTime-timer)*100 );
             if (timer > maxTime) {
                 // Death
                 gameObject.SetActive(false);
@@ -46,6 +51,7 @@ public class DrowningTimer : MonoBehaviour
         if (other.gameObject.CompareTag("Water")) {
             isUnderwater = false;
             OSCHandler.Instance.SendMessageToClient("pd","/unity/waterTrigger", 0);
+            OSCHandler.Instance.SendMessageToClient("pd","/unity/waterTime", 500);
             timer = 0;
         }
     }

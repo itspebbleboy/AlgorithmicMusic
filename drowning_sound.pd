@@ -34,6 +34,8 @@
 #X obj 115 14 r val2;
 #X floatatom 118 46 5 0 0 0 - - - 0;
 #X obj 132 77 select 0 1;
+#X msg 67 61;
+#X obj 296 80 r val3;
 #X connect 0 0 1 0;
 #X connect 0 0 1 1;
 #X connect 2 0 16 0;
@@ -76,3 +78,4 @@
 #X connect 32 0 33 0;
 #X connect 33 0 34 0;
 #X connect 34 0 5 0;
+#X connect 36 0 6 0;
