@@ -36,8 +36,8 @@ public class PlayerMovement : MonoBehaviour
         foreach (KeyValuePair<string, ServerLog> item in servers){
             if(item.Value.log.Count >0){
                 int lastPacketIndex = item.Value.packets.Count -1; //count text = text obj
-                //countText.text = item.Value.packets[lastPacketIndex].Address.ToString();
-                //countText.text += item.Value.packets[lastPacketIndex].Data[0].ToString();
+                Debug.Log("address: " + item.Value.packets[lastPacketIndex].Address.ToString() 
+                    + "data: " + item.Value.packets[lastPacketIndex].Data[0].ToString());
             }
         }
         //routine done

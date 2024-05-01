@@ -31,7 +31,7 @@ public class DrowningTimer : MonoBehaviour
         if (isUnderwater) {
             
             timer += Time.deltaTime;
-            Debug.Log((maxTime-timer)*100);
+            //Debug.Log((maxTime-timer)*100);
             OSCHandler.Instance.SendMessageToClient("pd","/unity/waterTime", (maxTime-timer)*100 );
             if (timer > maxTime) {
                 // Death

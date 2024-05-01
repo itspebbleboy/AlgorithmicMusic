@@ -1,4 +1,4 @@
-#N canvas 96 96 1920 1086 12;
+#N canvas 279 1182 1920 1086 12;
 #X obj 279 620 *~;
 #X obj 270 665 dac~;
 #X obj 180 395 mtof;
@@ -36,6 +36,7 @@
 #X obj 132 77 select 0 1;
 #X msg 67 61;
 #X obj 296 80 r val3;
+#X obj 308 157 s log;
 #X connect 0 0 1 0;
 #X connect 0 0 1 1;
 #X connect 2 0 16 0;
@@ -44,6 +45,7 @@
 #X connect 4 0 30 0;
 #X connect 5 0 4 0;
 #X connect 6 0 4 1;
+#X connect 6 0 37 0;
 #X connect 7 0 8 0;
 #X connect 7 0 13 0;
 #X connect 8 0 7 1;
