@@ -43,8 +43,9 @@ public class DrowningTimer : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Water")) {
             isUnderwater = true;
-            OSCHandler.Instance.SendMessageToClient("pd","/unity/waterTrigger", 0);
-            OSCHandler.Instance.SendMessageToClient("pd","/unity/music", 0);
+            OSCHandler.Instance.SendMessageToClient("pd","/unity/waterTrigger", 0);            
+            if(GetComponent<CoinCollect>().coins < 4){OSCHandler.Instance.SendMessageToClient("pd","/unity/music", 0); }
+
         }
     }
 
@@ -53,8 +54,7 @@ public class DrowningTimer : MonoBehaviour
             isUnderwater = false;
             OSCHandler.Instance.SendMessageToClient("pd","/unity/waterTrigger", 0);
             OSCHandler.Instance.SendMessageToClient("pd","/unity/waterTime", 500);
-            
-            OSCHandler.Instance.SendMessageToClient("pd","/unity/music", 0);
+            if(GetComponent<CoinCollect>().coins < 4){OSCHandler.Instance.SendMessageToClient("pd","/unity/music", 0); }
             timer = 0;
         }
     }

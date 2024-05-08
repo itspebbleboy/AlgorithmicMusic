@@ -1,4 +1,4 @@
-#N canvas 81 160 3456 1935 12;
+#N canvas 53 257 3456 694 12;
 #X obj 417 38 r val4;
 #X msg 782 410 1 0 \, 0 250 0;
 #X obj 782 444 vline~;
@@ -150,13 +150,13 @@
 #X text 140 921 jump.wav is played on var trigger;
 #X text 419 1188 visualizer to make sure .wav is loaded;
 #X obj 1032 1154 *~;
-#X obj 1247 988 vsl 19 162 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 1247 988 vsl 19 162 0 1 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 1765 1444 *~;
-#X obj 2029 1265 vsl 19 162 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 2029 1265 vsl 19 162 0 1 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 1855 678 *~;
-#X obj 2055 564 vsl 19 162 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 2055 564 vsl 19 162 0 1 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 896 547 *~;
-#X obj 1087 382 vsl 19 162 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 1087 382 vsl 19 162 0 1 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 1034 346 cnv 19 200 25 empty empty Channel\ 1:\ Volume 20 12 0 16 #ffc7c6 #404040 0;
 #X obj 1971 523 cnv 19 200 25 empty empty Channel\ 2:\ Volume 20 12 0 16 #c6feff #404040 0;
 #X obj 1948 1227 cnv 19 200 25 empty empty Channel\ 5:\ Volume 20 12 0 16 #e3c6ff #404040 0;
@@ -175,7 +175,7 @@
 #X obj 1567 772 cnv 19 500 25 empty empty Channel\ Five(Triangle\ Waveform)\ Coin\ Collection 20 12 0 16 #e3c6ff #404040 0;
 #X obj 1522 10 cnv 19 500 25 empty empty Channel\ Two(Pulse\ Waveform)\ Drowning\ Sequencing\  20 12 0 16 #c6feff #404040 0;
 #X obj 84 1160 *~;
-#X obj 264 998 vsl 19 162 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 264 998 vsl 19 162 0 1 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 218 964 cnv 19 200 25 empty empty Channel\ 3:\ Volume 20 12 0 16 #ffe3c6 #404040 0;
 #X text 288 1004 Louder;
 #X text 289 1145 Quieter;

@@ -39,6 +39,10 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.Space)) {
             rb2d.velocity = new Vector2(rb2d.velocity.x, jumpSpeed);
         }
+        
+        Vector3 position = gameObject.transform.position;
+        position.z = -2;
+        gameObject.transform.position = position;
 
         OSCHandler.Instance.UpdateLogs();
         Dictionary<string, ServerLog> servers = OSCHandler.Instance.Servers;
