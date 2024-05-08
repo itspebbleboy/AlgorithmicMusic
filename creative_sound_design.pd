@@ -49,7 +49,7 @@
 #X obj 417 354 mod 12;
 #X text 28 312 Mathematical Objects(Increments of 1 that go up to 12);
 #X obj 1855 642 *~;
-#X obj 1847 682 dac~;
+#X obj 1845 722 dac~;
 #X obj 1743 432 mtof;
 #X obj 1743 393 + 0;
 #X obj 1695 167 metro 4000;
@@ -104,7 +104,7 @@
 #X obj 1766 1206 phasor~;
 #X floatatom 1766 1126 5 0 0 0 - - - 0;
 #X obj 1766 1407 *~;
-#X obj 1754 1445 dac~;
+#X obj 1756 1483 dac~;
 #X obj 1851 1206 phasor~;
 #X obj 1851 1164 * -1;
 #X obj 1766 1345 +~;
@@ -151,9 +151,9 @@
 #X text 419 1188 visualizer to make sure .wav is loaded;
 #X obj 1032 1154 *~;
 #X obj 1247 988 vsl 19 162 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
-#X obj 1814 1431 *~;
+#X obj 1765 1444 *~;
 #X obj 2029 1265 vsl 19 162 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
-#X obj 1840 730 *~;
+#X obj 1855 678 *~;
 #X obj 2055 564 vsl 19 162 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 896 547 *~;
 #X obj 1087 382 vsl 19 162 0 127 0 0 empty empty empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
@@ -233,8 +233,7 @@
 #X connect 44 0 6 0;
 #X connect 46 0 17 0;
 #X connect 47 0 39 0;
-#X connect 49 0 50 0;
-#X connect 49 0 50 1;
+#X connect 49 0 151 0;
 #X connect 51 0 65 0;
 #X connect 52 0 51 0;
 #X connect 53 0 56 0;
@@ -286,8 +285,7 @@
 #X connect 102 0 112 0;
 #X connect 103 0 102 0;
 #X connect 103 0 107 0;
-#X connect 104 0 105 0;
-#X connect 104 0 105 1;
+#X connect 104 0 149 0;
 #X connect 106 0 111 0;
 #X connect 107 0 106 0;
 #X connect 108 0 133 0;
@@ -331,7 +329,11 @@
 #X connect 147 0 87 0;
 #X connect 147 0 87 1;
 #X connect 148 0 147 1;
+#X connect 149 0 105 0;
+#X connect 149 0 105 1;
 #X connect 150 0 149 1;
+#X connect 151 0 50 0;
+#X connect 151 0 50 1;
 #X connect 152 0 151 1;
 #X connect 153 0 8 0;
 #X connect 153 0 8 1;
